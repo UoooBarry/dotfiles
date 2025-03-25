@@ -12,7 +12,7 @@ Minimal, productivity-focused macOS development environment just for my self.
 - Tiling window management with yabai
 - Lightning-fast window switching
 
-### ✍️ NeovimEditor
+### ✍️ Neovim Editor
 - Personal Neovim configuration
 - Optimized for:
   - Ruby/Golang/Typescript development
