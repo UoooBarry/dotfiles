@@ -5,7 +5,7 @@ Minimal, productivity-focused macOS development environment just for my self.
 ## ✨ Features
 
 ### 🪟 Window Management (yabai + skhd)
-- **Hyper-key workflow**: `⌘ + Number` shortcuts
+- **Hyper-key workflow**: `CTRL + Number` shortcuts
   - `CTRL + 1` → Browser (Chrome/Firefox)
   - `CTRL + 2` → Terminal with Neovim ready
   - Additional spaces for other apps
