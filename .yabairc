@@ -1,0 +1,41 @@
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# In order to prevent simple-bar freezing upon yabai restart, you'll need to add
+osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
+defaults write com.apple.dock mru-spaces -bool false
+killall Dock
+
+yabai -m config layout float
+yabai -m config top_padding 0
+yabai -m config bottom_padding 0
+yabai -m config left_padding 0
+yabai -m config right_padding 0
+
+# Destroy existed
+spaces=$(yabai -m query --spaces | jq '.[].index')
+for space in $(echo "$spaces" | sort -rn); do
+  if [[ "$space" != 1 ]]; then
+    yabai -m space "$space" --destroy
+  fi
+done
+
+# Create 3 spaces
+yabai -m space --create
+yabai -m space --create
+yabai -m space --create
+
+yabai -m space 1 --label "Browser" --create --layout stack
+yabai -m space 2 --label "Terminal" --create --layout stack
+yabai -m space 3 --label "Normal" --create --layout float
+
+yabai -m config --space 1 layout stack
+yabai -m config --space 2 layout stack
+yabai -m config --space 3 layout float
+
+yabai -m rule --add app="^Zen" space=^1 mouse_follows_focus=on
+yabai -m rule --add app="^iTerm2" space=2 mouse_follows_focus=on
+yabai -m rule --add app="^WeChat" space=3 manage=off
+
+
+yabai -m rule --apply
