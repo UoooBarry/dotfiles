@@ -8,7 +8,7 @@ ctrl - 2 : yabai -m space --focus 2
 ctrl - 3 : yabai -m space --focus 3
 
 # Restart yabai
-ctrl - 0 : yabai --restart-service
+ctrl - z : yabai --restart-service
 
 # yabai -m signal --add event=window_created action='
 #     if [[ "$(yabai -m query --windows --window $YABAI_WINDOW_ID | jq -r ".app")" != "Zen" && \
