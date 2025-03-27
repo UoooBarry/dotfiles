@@ -1,4 +1,4 @@
-# UoooBarry's Dotfiles
+# My Dotfiles
 
 Minimal, productivity-focused macOS development environment just for my self.
 
@@ -8,7 +8,7 @@ Minimal, productivity-focused macOS development environment just for my self.
 - **Hyper-key workflow**: `CTRL + Number` shortcuts
   - `CTRL + 1` → Browser (Chrome/Firefox)
   - `CTRL + 2` → Terminal with Neovim ready
-  - Additional spaces for other apps
+  - `CTRL + 3` → Additional spaces for other apps
 - Tiling window management with yabai
 - Lightning-fast window switching
 
