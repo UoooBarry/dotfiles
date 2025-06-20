@@ -34,7 +34,7 @@ yabai -m config --space 2 layout stack
 yabai -m config --space 3 layout float
 
 yabai -m rule --add app="^Zen" space=^1 mouse_follows_focus=on
-yabai -m rule --add app="^iTerm2" space=2 mouse_follows_focus=on
+yabai -m rule --add app="^(iTerm2|kitty)" space=2 mouse_follows_focus=on
 yabai -m rule --add app="^(?!Zen$|iTerm2$).*$" space=3 manage=off
 yabai -m rule --add app="^WeChat" space=3 manage=off
 
@@ -47,7 +47,7 @@ yabai -m signal --add \
         if [[ "$APP" =~ ^(Zen|Safari|Google Chrome|Firefox)$ ]]; then
             yabai -m window "$YABAI_WINDOW_ID" --space 1
             yabai -m window "$YABAI_WINDOW_ID" --toggle zoom-fullscreen
-        elif [[ "$APP" =~ ^(iTerm2|Alacritty|Terminal)$ ]]; then
+        elif [[ "$APP" =~ ^(iTerm2|Alacritty|Terminal|kitty)$ ]]; then
             yabai -m window "$YABAI_WINDOW_ID" --space 2
             yabai -m window "$YABAI_WINDOW_ID" --toggle zoom-fullscreen
         else
