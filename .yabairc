@@ -47,7 +47,7 @@ yabai -m signal --add \
         if [[ "$APP" =~ ^(Zen|Safari|Google Chrome|Firefox)$ ]]; then
             yabai -m window "$YABAI_WINDOW_ID" --space 1
             yabai -m window "$YABAI_WINDOW_ID" --toggle zoom-fullscreen
-        elif [[ "$APP" =~ ^(iTerm2|Alacritty|Terminal|kitty)$ ]]; then
+        elif [[ "$APP" =~ ^(iTerm2|Alacritty|Terminal|kitty|Ghostty)$ ]]; then
             yabai -m window "$YABAI_WINDOW_ID" --space 2
             yabai -m window "$YABAI_WINDOW_ID" --toggle zoom-fullscreen
         else
